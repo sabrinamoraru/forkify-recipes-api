@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "dev-webpack": "webpack-dev-server --mode development --open",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Sabrina Moraru",
   "license": "ISC",
@@ -22,6 +24,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
+    "express": "^4.15.5",
     "fractional": "^1.0.0",
     "uniqid": "^4.1.1"
   }
